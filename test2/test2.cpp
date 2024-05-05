@@ -10,11 +10,11 @@ int main() {
     getline(cin, b);
     try {
         if (a.length() != b.length()) {
-            throw exception("Длины строк не равны");
+            throw 1;
         }
         cout << "Длины строк равны";
     }
-    catch (exception e) {
-        cout << e.what() << endl;
+    catch (int e) {
+        if (e == 1) cout << "Длины строк не равны" << endl;
     }
 }
